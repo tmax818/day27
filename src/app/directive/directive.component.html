@@ -1,0 +1,19 @@
+<p *ngIf="serverName === ''">
+  type something in the box!!!
+</p>
+
+<p *ngIf="serverName !== ''">
+  Okay, now hold the 'alt-key' and click the button!
+</p>
+
+<input class="form-control" type="text" [(ngModel)]="serverName" />
+<button
+  class="btn btn-primary"
+  (click)="onExpression($event)"
+  [disabled]="!serverName"
+>
+  Click
+</button>
+<p class="test" *ngIf="serverName !== 'goodbye'">{{ serverName }}</p>
+<p>{{ message }}</p>
+<p *ngIf="show">Yes, I have too much time on my hands!!!</p>
